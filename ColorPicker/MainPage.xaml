@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ColorPicker.MainPage"
+             x:Name="contentPage">
+
+    <Grid>
+        <Frame 
+            BackgroundColor="#113245"
+            BorderColor="White"
+            Margin="55,160"
+            CornerRadius="50">
+            <VerticalStackLayout
+                Spacing="25">
+                <Label 
+                Text="Color Picker"
+                TextColor="#FFFFFF"
+                HorizontalOptions="Center"
+                FontAttributes="Bold"
+                FontFamily="Arial"
+                FontSize="24"/>
+
+                <Label
+                    Text="Red Value"
+                    TextColor="White"
+                    />
+                <Slider
+                    x:Name="RedSlider"
+                    ThumbColor="Red"
+                    MinimumTrackColor="DarkRed"
+                    MaximumTrackColor="White"
+                    Minimum="0"
+                    Maximum="255"
+                    ValueChanged="Slider_ValueChanged"
+                    />
+                <Label
+                    Text="Green Value"
+                    TextColor="White"
+                    />
+                <Slider
+                    x:Name="GreenSlider"
+                    ThumbColor="Green"
+                    MinimumTrackColor="DarkGreen"
+                    MaximumTrackColor="White"
+                    Minimum="0"
+                    Maximum="255"
+                    ValueChanged="Slider_ValueChanged"
+                    />
+                <Label
+                    Text="Blue Value"
+                    TextColor="White"
+                    />
+                <Slider
+                    x:Name="BlueSlider"
+                    ThumbColor="Blue"
+                    MinimumTrackColor="Blue"
+                    MaximumTrackColor="White"
+                    Minimum="0"
+                    Maximum="255"
+                    ValueChanged="Slider_ValueChanged"
+                    />
+
+                <HorizontalStackLayout
+                    Spacing="12"
+                    HorizontalOptions="Center">
+                    <Label
+                    x:Name="hex_code"
+                    Text="#235321"
+                    TextColor="#FFFFFF"
+                    HorizontalOptions="Center"/>
+                    <Rectangle
+                        x:Name="box_thing"
+                        HeightRequest="20"
+                        WidthRequest="20"
+                        BackgroundColor="White"/>
+                </HorizontalStackLayout>
+
+                <Button
+                    x:Name="button_thing"
+                    Text="Generate Random Color"
+                    BackgroundColor="#486752"
+                    CornerRadius="35"
+                    Clicked="GenarateRandomColor_Clicked"/>
+            </VerticalStackLayout>
+
+        </Frame>
+    </Grid>
+
+</ContentPage>
